@@ -126,6 +126,6 @@ app.post(
     }
   });
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('/home/ubuntu/public/'));
 
 app.listen(80);
