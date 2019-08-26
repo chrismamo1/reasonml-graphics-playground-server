@@ -19,6 +19,8 @@ function rawBody(req, res, next) {
   });
 }
 
+app.use(express.static('/home/ubuntu/public/build/'));
+
 app.use(rawBody);
 
 app.get(
@@ -125,7 +127,5 @@ app.post(
       )
     }
   });
-
-app.use(express.static('/home/ubuntu/public/'));
 
 app.listen(80);
