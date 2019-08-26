@@ -1,7 +1,7 @@
 FROM debian:latest
 RUN apt update
-RUN apt -y install m4 opam
-RUN opam init -y
+RUN apt -y install m4 opam mccs
+RUN opam init -y --disable-sandboxing --solver=mccs
 RUN opam update
 RUN opam switch create 4.07.1
 RUN opam install -y reason
