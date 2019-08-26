@@ -126,4 +126,6 @@ app.post(
     }
   });
 
+app.use(express.static(path.join(__dirname, '/public')));
+
 app.listen(6969);
